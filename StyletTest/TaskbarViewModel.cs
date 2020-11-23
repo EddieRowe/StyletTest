@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Security.Principal;
 
 namespace StyletTest
 {
@@ -17,16 +18,21 @@ namespace StyletTest
         }
         private string testBinding;
 
-        public TaskbarViewModel()
+        private IWindowManager windowManager;
+
+        public TaskbarViewModel(IWindowManager windowManager)
         {
             TestBinding = "binding1";
+            this.windowManager = windowManager;
         }
 
         public void DoClick(object sender, EventArgs e)
         {
+            string user = Environment.UserName;
+            // Capitalise first letters, remove dots, replace with spaces
+            TestBinding = user;
             
-            TestBinding = "binding2";
-
+            
         }
 
     }
