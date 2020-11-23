@@ -28,6 +28,7 @@ namespace StyletTest
 
         public void DoClick(object sender, EventArgs e)
         {
+            // this would be checked via api, if null usr not logged in
             string user = Environment.UserName;
             // Capitalise first letters, remove dots, replace with spaces
             TestBinding = user;
