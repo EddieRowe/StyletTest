@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Security.Principal;
+using System.ComponentModel;
 
 namespace StyletTest
 {
@@ -30,10 +31,10 @@ namespace StyletTest
         {
             // this would be checked via api, if null usr not logged in
             string user = Environment.UserName;
-            // Capitalise first letters, remove dots, replace with spaces
+            // TODO Capitalise first letters, remove dots, replace with spaces
             TestBinding = user;
             
-            
+           
         }
 
     }
