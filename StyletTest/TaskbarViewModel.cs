@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Security.Principal;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace StyletTest
 {
@@ -30,9 +31,14 @@ namespace StyletTest
         public void DoClick(object sender, EventArgs e)
         {
             // this would be checked via api, if null usr not logged in
-            string user = Environment.UserName;
-            // TODO Capitalise first letters, remove dots, replace with spaces
-            TestBinding = user;
+            string username = Environment.UserName;
+
+            username = username.Replace('.', ' ');
+            TextInfo tI = new CultureInfo("en-US", false).TextInfo;
+            username = tI.ToTitleCase(username);
+
+            TestBinding = username;
+            
             
            
         }

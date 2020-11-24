@@ -24,8 +24,8 @@
         <TextBlock Grid.Column="0" TextAlignment="Center" 
                    VerticalAlignment="Center" Text="{Binding TestBinding}"/>
 -->
-        <Button Grid.Column="1" Click="{s:Action DoClick}">Button 1</Button>
-        <TextBlock Grid.Column="2" Text="{Binding TestBinding}"/> 
+        <Button Grid.Column="1" Click="{s:Action DoClick}">Login</Button>
+        <TextBlock Grid.Column="2" Margin="3" Text="{Binding TestBinding}"/> 
     </Grid>
 
     
